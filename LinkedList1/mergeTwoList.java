@@ -1,5 +1,4 @@
 package LinkedList1;
-
 public class mergeTwoList {
         public static class ListNode {
             int val;
