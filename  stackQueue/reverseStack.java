@@ -1,7 +1,14 @@
-package Stack1;
 import java.util.Stack;
 
-public class pushAtBottom {
+public class reverseStack {
+    public static void reverseStacks(Stack<Integer> s) {
+        if (s.isEmpty()) {
+            return;
+        }
+        int top = s.pop();
+        reverseStacks(s);
+        pushAtBottoms(s, top);
+    }
     public static void pushAtBottoms(Stack<Integer> s, int data) {
         if (s.isEmpty()) {
             s.push(data);
@@ -16,10 +23,9 @@ public class pushAtBottom {
         s.push(1);
         s.push(2);
         s.push(3);
-        pushAtBottoms(s, 0);
-        while (!s.isEmpty()) { 
-            System.out.println(s.peek());
-            s.pop();
-        }
+        System.out.println(s); // Output: [1, 2, 3]
+        reverseStacks(s);
+        System.out.println(s); // Output: [3, 2, 1]
+
     }
 }

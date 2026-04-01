@@ -1,5 +1,3 @@
-package Stack1;
-
 public class stackUsingLinkedList {
     public static class Node {
         int data;

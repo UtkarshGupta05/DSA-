@@ -1,4 +1,3 @@
-package Stack1;
 import java.util.ArrayList;
 
 public class stackUsingArrayList {

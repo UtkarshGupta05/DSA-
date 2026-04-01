@@ -1,5 +1,3 @@
-package Stack1;
-
 public class validparenthesis {
     public static boolean isValid(String s) {
         java.util.Stack<Character> stack = new java.util.Stack<>();

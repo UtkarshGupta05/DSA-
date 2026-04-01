@@ -1,5 +1,3 @@
-package Stack1;
-
 public class StockSpanUsingStack {
     public static int[] calculateSpan(int[] prices) {
         int n = prices.length;

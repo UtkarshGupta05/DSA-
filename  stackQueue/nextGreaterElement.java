@@ -1,5 +1,3 @@
-package Stack1;
-
 public class nextGreaterElement {
     public static int[] nextGreater(int[] arr) {
         int n = arr.length;
