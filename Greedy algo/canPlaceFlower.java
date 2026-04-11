@@ -20,14 +20,40 @@ public class canPlaceFlower {
                 count++; 
             }
         }
-        if(count>=n){
-            return true;
-        }
-        return false;
+        return count>=n;
     }
+
+    public boolean canPlaceFlowers1(int[] flowerbed, int n) {
+    int count = 0;
+
+    for (int i = 0; i < flowerbed.length; i++) {
+
+        // check if current spot is empty
+        if (flowerbed[i] == 0) {
+
+            // check left and right
+            int left = (i == 0) ? 0 : flowerbed[i - 1];
+            int right = (i == flowerbed.length - 1) ? 0 : flowerbed[i + 1];
+
+            // if both sides are empty → plant flower
+            if (left == 0 && right == 0) {
+                flowerbed[i] = 1;
+                count++;
+
+                // optimization: skip next index
+                i++;
+            }
+        }
+    }
+
+    return count >= n;
+
+}
     public static void main(String[] args) {
         canPlaceFlower cpf=new canPlaceFlower();
         int[] flowerbed={0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0};
+        int[] flowerbed1={0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0};
         System.out.println(cpf.canPlaceFlowers(flowerbed, 4));
+        System.out.println(cpf.canPlaceFlowers1(flowerbed1, 4));
     }
 }
