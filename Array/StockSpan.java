@@ -1,5 +1,3 @@
-package Array;
-
 public class StockSpan {
     public static int[] calculateSpan(int[] prices) {
         int n = prices.length;
