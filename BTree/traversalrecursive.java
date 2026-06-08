@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class traversal {
+public class traversalrecursive {
     static int n;
     static class Node{
         int data;
